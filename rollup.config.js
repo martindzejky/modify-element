@@ -6,7 +6,7 @@ export default {
         name: 'ModifyElement',
         file: './dist/modify-element.js',
         format: 'iife',
-        sourcemap: ENV === 'production',
+        sourcemap: ENV !== 'production',
     },
     watch: {
         clearScreen: false,
