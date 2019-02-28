@@ -5,5 +5,8 @@
   "main": "src/index.ts",
   "repository": "git@github.com:martindzejky/modify-element.git",
   "author": "Martin Jakubik <martin@jakubik.info>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^1.16.4"
+  }
 }
