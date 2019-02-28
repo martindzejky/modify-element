@@ -15,16 +15,16 @@ export class Observer {
         attributes: true,
     };
 
-    constructor(private target: Node, private callback: ObserverCallback) {
+    constructor(private callback: ObserverCallback) {
         this.mutationObserverInstance = new MutationObserver(
             this.observerHandler.bind(this),
         );
     }
 
-    start() {
+    start(target: Element) {
         if (!this.isObserving) {
-            this.mutationObserverInstance.observe(this.target, this.config);
             this.isObserving = true;
+            this.mutationObserverInstance.observe(target, this.config);
         }
     }
 

@@ -1,6 +1,6 @@
 const { ENV } = process.env;
 
-module.exports = {
+export default {
     input: './src/index.ts',
     output: {
         name: 'ModifyElement',
