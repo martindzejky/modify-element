@@ -1,6 +1,7 @@
 import { Observer } from './observer';
 import { ElementCallback } from './types/element-callback-type';
 import { ElementDirectory } from './types/element-directory.type';
+import { CssSelector } from './types/selector.type';
 
 /**
  * Allows to observe elements using CSS selectors. Uses the Observer wrapper
@@ -28,7 +29,7 @@ export class Elements {
         }
     }
 
-    registerSelector(selector: string, callback: ElementCallback) {
+    registerSelector(selector: CssSelector, callback: ElementCallback) {
         if (selector in this.registeredSelectors) {
             const callbackArray = this.registeredSelectors[selector];
 
@@ -42,7 +43,7 @@ export class Elements {
         }
     }
 
-    unregisterSelector(selector: string, callback: ElementCallback) {
+    unregisterSelector(selector: CssSelector, callback: ElementCallback) {
         if (selector in this.registeredSelectors) {
             const callbackArray = this.registeredSelectors[selector];
 
