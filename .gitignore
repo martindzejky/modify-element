@@ -25,6 +25,7 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+/.rpt2_cache
 
 # System Files
 .DS_Store
