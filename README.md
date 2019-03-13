@@ -42,3 +42,16 @@ selectors and starts the MutationObserver.
 ### `ModifyElement.stop`
 
 Stop observing the root element.
+
+## Development
+
+Clone the repository locally first. This project uses `yarn` so call `yarn install` to install
+the dependencies. Then there are these important scripts:
+
+- `yarn build` - Build a development version
+- `yarn build:min` - Build a production version (minified)
+- `yarn build:watch` - Watch source files and rebuild
+
+## Tests
+
+See #1.
