@@ -23,10 +23,8 @@ export default {
             rollupCommonJSResolveHack: true,
         }),
 
-        // TODO: Uglify cannot minify ES6 code
-        // https://github.com/webpack/webpack/issues/2972#issuecomment-261705632
-        ...(ENV === 'production'
-            ? [require('rollup-plugin-uglify').uglify()]
-            : []),
+        require('rollup-plugin-babel')({
+            exclude: 'node_modules/**',
+        }),
     ],
 };
