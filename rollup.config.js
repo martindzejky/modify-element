@@ -3,7 +3,7 @@ import commonJs from 'rollup-plugin-commonjs';
 import typescript from 'rollup-plugin-typescript2';
 import babel from 'rollup-plugin-babel';
 
-const { ENV } = process.env;
+const { NODE_ENV } = process.env;
 
 export default {
     input: './src/index.ts',
@@ -11,7 +11,7 @@ export default {
         name: 'ModifyElement',
         file: './dist/modify-element.js',
         format: 'iife',
-        sourcemap: ENV !== 'production',
+        sourcemap: NODE_ENV !== 'production',
     },
     watch: {
         clearScreen: false,

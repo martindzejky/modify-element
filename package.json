@@ -7,9 +7,9 @@
   "author": "Martin Jakubik <martin@jakubik.info>",
   "license": "MIT",
   "scripts": {
-    "build": "cross-env ENV=development rollup --config",
-    "build:min": "cross-env ENV=production rollup --config --file ./dist/modify-element.min.js",
-    "build:watch": "cross-env ENV=development rollup --config --watch"
+    "build": "cross-env NODE_ENV=development rollup --config",
+    "build:min": "cross-env NODE_ENV=production rollup --config --file ./dist/modify-element.min.js",
+    "build:watch": "cross-env NODE_ENV=development rollup --config --watch"
   },
   "engines": {
     "node": ">= 10"
