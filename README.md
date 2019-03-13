@@ -1,5 +1,9 @@
 # modify-element
 
+![license](https://img.shields.io/github/license/martindzejky/modify-element.svg)
+![prettier](https://img.shields.io/badge/format-prettier-blueviolet.svg)
+![version](https://img.shields.io/github/package-json/v/martindzejky/modify-element.svg)
+
 Allows you to easily modify HTML elements on websites.
 A small utility library to simplify working with the `MutationObserver` browser API.
 
