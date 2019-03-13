@@ -11,6 +11,13 @@
     "build:min": "cross-env ENV=production rollup --config --file ./dist/modify-element.min.js",
     "build:watch": "cross-env ENV=development rollup --config --watch"
   },
+  "engines": {
+    "node": ">= 10"
+  },
+  "browserslist": [
+    "last 1 version",
+    "not dead"
+  ],
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
