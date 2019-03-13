@@ -1,3 +1,8 @@
+import nodeResolve from 'rollup-plugin-node-resolve';
+import commonJs from 'rollup-plugin-commonjs';
+import typescript from 'rollup-plugin-typescript2';
+import babel from 'rollup-plugin-babel';
+
 const { ENV } = process.env;
 
 export default {
@@ -12,18 +17,14 @@ export default {
         clearScreen: false,
     },
     plugins: [
-        require('rollup-plugin-node-resolve')({
-            browser: true,
-        }),
-        require('rollup-plugin-commonjs')({
-            include: /node_modules/,
-        }),
+        nodeResolve({ browser: true }),
+        commonJs({ include: /node_modules/ }),
 
-        require('rollup-plugin-typescript2')({
+        typescript({
             rollupCommonJSResolveHack: true,
         }),
 
-        require('rollup-plugin-babel')({
+        babel({
             exclude: 'node_modules/**',
         }),
     ],
