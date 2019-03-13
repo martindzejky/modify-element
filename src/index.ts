@@ -57,7 +57,7 @@ export function registerSelector(
 /**
  * Remove the registered callback.
  *
- * @param selector Selector assign with the callback
+ * @param selector Selector assigned with the callback
  * @param callback Callback function to remove
  */
 export function unregisterSelector(
