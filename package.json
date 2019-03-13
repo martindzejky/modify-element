@@ -1,6 +1,6 @@
 {
   "name": "modify-element",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Allows you to easily modify elements on websites using MutationObserver",
   "main": "src/index.ts",
   "repository": "git@github.com:martindzejky/modify-element.git",
