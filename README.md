@@ -58,4 +58,4 @@ the dependencies. Then there are these important scripts:
 
 ## Tests
 
-See #1.
+See [#1](https://github.com/martindzejky/modify-element/issues/1).
