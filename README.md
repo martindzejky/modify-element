@@ -1,6 +1,5 @@
 # modify-element
 
-![license](https://img.shields.io/github/license/martindzejky/modify-element.svg)
 ![prettier](https://img.shields.io/badge/format-prettier-blueviolet.svg)
 ![version](https://img.shields.io/github/package-json/v/martindzejky/modify-element.svg)
 
@@ -59,3 +58,4 @@ the dependencies. Then there are these important scripts:
 ## Tests
 
 See [#1](https://github.com/martindzejky/modify-element/issues/1).
+
