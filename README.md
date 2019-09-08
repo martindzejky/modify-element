@@ -48,12 +48,12 @@ Stop observing the root element.
 
 ## Development
 
-Clone the repository locally first. This project uses `yarn` so call `yarn install` to install
+Clone the repository locally first. This project uses `npm` so call `npm install` to install
 the dependencies. Then there are these important scripts:
 
-- `yarn build` - Build a development version
-- `yarn build:min` - Build a production version (minified)
-- `yarn build:watch` - Watch source files and rebuild
+- `npm build` - Build a development version
+- `npm build:min` - Build a production version (minified)
+- `npm build:watch` - Watch source files and rebuild
 
 ## Tests
 
