@@ -12,7 +12,9 @@ const elements = new Elements();
  */
 export function start(rootElement: Element) {
     if (!rootElement) {
-        throw new Error('You must pass in a root element to observe');
+        throw new TypeError(
+            'rootElement parameter is required. You must pass in an element to observe.',
+        );
     }
 
     if (
@@ -21,7 +23,9 @@ export function start(rootElement: Element) {
     ) {
         elements.start(rootElement);
     } else {
-        throw new Error('You must pass in an element node');
+        throw new TypeError(
+            `rootElement must be an element. You passed in: ${typeof rootElement}.`,
+        );
     }
 }
 
@@ -44,11 +48,15 @@ export function registerSelector(
     callback: ElementCallback,
 ) {
     if (!selector) {
-        throw new Error('You must pass in a selector');
+        throw new TypeError(
+            'selector is required. How else do you want to select an element?',
+        );
     }
 
     if (!callback || typeof callback !== 'function') {
-        throw new Error('You must pass in a callback function');
+        throw new TypeError(
+            `callback function is required. You passed in: ${typeof callback}.`,
+        );
     }
 
     elements.registerSelector(selector, callback);
@@ -64,5 +72,17 @@ export function unregisterSelector(
     selector: CssSelector,
     callback: ElementCallback,
 ) {
+    if (!selector) {
+        throw new TypeError(
+            'selector is required to unregister the correct callback.',
+        );
+    }
+
+    if (!callback || typeof callback !== 'function') {
+        throw new TypeError(
+            `callback function is required. You passed in: ${typeof callback}.`,
+        );
+    }
+
     elements.unregisterSelector(selector, callback);
 }
